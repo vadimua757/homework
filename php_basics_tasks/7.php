@@ -7,13 +7,15 @@
 <body>
     <?php
         $name = "Vadim";
-        $age = 60;
+        $age = 15;
         echo "Меня зовут: $name <br>";
         echo "Мне $age лет <br>";
-            if($age > 18 & $age <= 59) {
+            if($age > 18 && $age <= 59) {
                 echo "Вам еще работать и работать";
             } elseif ($age > 59) {
                 echo "Вам пора на пенсию";
+            } elseif ($age <= 17) {
+                echo "Вам еще рано работать";
             }
     ?>
 </body>
