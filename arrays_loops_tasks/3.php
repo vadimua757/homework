@@ -3,11 +3,8 @@
     foreach ($arr as $value) {
         echo $value . "<br>";
     }
-    $sum = 0;
+    $result = 0;
     foreach ($arr as $value) {
-    $sum2 = ($value) * 2;
-    $sum += $value;
+        $result += pow($value,2);
     }
-    echo "Сумма квадратов элементов массива равна $sum2";
-?>
-
+    echo "Сумма квадратов элементов массива равна $result";
