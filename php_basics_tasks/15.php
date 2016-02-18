@@ -20,8 +20,21 @@
                 echo $a * $b;
                 break;
             case "/";
-                echo $a / $b;
+                if($b==0){
+                    echo "Делить на 0 нельзя!";
+                }
+                elseif($b!==0){
+                    echo $a/$b;
+                }
                 break;
+                case '%':
+                if($b==0){
+                    echo "Делить на 0 нельзя!";
+                }
+                elseif($b!==0) {
+                    echo $a % $b;
+                    break;
+                }
         }
     ?>
 </body>

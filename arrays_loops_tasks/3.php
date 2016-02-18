@@ -5,7 +5,7 @@
     }
     $sum = 0;
     foreach ($arr as $value) {
-    $sum2 = $value * $value;
+    $sum2 = ($value) * 2;
     $sum += $value;
     }
     echo "Сумма квадратов элементов массива равна $sum2";
