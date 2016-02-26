@@ -5,8 +5,13 @@
  * @param $action
  * @param array $params
  */
-function getUrlByParams($controller, $action, $params = array()){
-    return '/'.'?controller='.$controller.'$action='.$action;
+function getUrlByParams($controller,$action,$params=array()){
+    $url=http_build_query(array(
+            'controller'=>$controller,
+            'action'=>$action,
+        )
+    );
+    return '/?'.$url;
 }
 /**
  * Получаем меню

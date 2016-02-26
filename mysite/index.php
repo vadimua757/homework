@@ -12,7 +12,7 @@ if ( $_GET ){
     }
 }
 
-include('D:\server\mysite\config.php');
+include('config.php');
 
 include('helpers/menu.helper.php');
 
@@ -22,11 +22,17 @@ $data['menu'] = getMenu();
 
 $_controller_path = CONTROLLERS_PATH .'/' . $_controller . '.controller.php';
 
+/*
+ * $directory_root = '/full/system/path/to/doc_root';
+
+    require_once($directory_root.'/app/bootstrap.php');
+ */
+
 if ( file_exists($_controller_path) ){
-    require_once($_controller_path);
+    require "$_controller_path";
     call_user_func($_action, $_GET);
 } else {
     die('Error');
 }
 
-include('views/index.html');
+include('views/main.html');

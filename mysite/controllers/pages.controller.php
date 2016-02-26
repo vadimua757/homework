@@ -5,7 +5,7 @@ function index($params) {
 }
 
 function education($params) {
-    echo 'Образование'.$params['alias'];
+    echo 'Образование';
 }
 
 function experience($params) {
